@@ -18,4 +18,10 @@ app.use(express.static("public")); //to access the public folder
 
 app.use(cookieParser()); //to parse the cookie
 
+//routes
+import userRoutes from "./routes/user.routes.js";
+
+//routes decclaration
+app.use("/api/v1/users", userRoutes);
+
 export default app;
